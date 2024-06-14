@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas?</title>
+    <style>
+        body {
+            background-color: #F8BBD0; /* Fondo medio rosado suave */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-style: italic; /* Título en cursiva */
+            margin-top: 20px; /* Espacio desde la parte superior */
+        }
+        img {
+            margin-top: 20px; /* Espacio entre el título y la imagen */
+            max-width: 80%; /* Ajusta el tamaño máximo de la imagen al 80% del ancho de la página */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .buttons {
+            margin-top: 20px; /* Espacio entre la imagen y los botones */
+            position: relative; /* Permite posicionamiento absoluto de los botones hijos */
+            width: 100%; /* Asegura que los botones se mantengan dentro del contenedor */
+            display: flex;
+            justify-content: center; /* Centra los botones horizontalmente */
+        }
+        .buttons button {
+            background-color: #E57373; /* Color de fondo de los botones */
+            color: white; /* Color del texto de los botones */
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px; /* Espacio entre los botones */
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px; /* Bordes redondeados */
+            position: relative; /* Permite que el botón "No" sea posicionado */
+        }
+        .buttons button:hover {
+            background-color: #EF5350; /* Color de fondo de los botones al pasar el mouse */
+        }
+        audio {
+            margin-top: 20px; /* Espacio entre los botones y el elemento de audio */
+        }
+    </style>
+</head>
+<audio autoplay loop>
+    <source src="me perdonas.mp3" type="audio/mpeg">
+</audio>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <img src="roblox.png" alt="Imagen debajo del título">
+    <div class="buttons">
+        <button id="yes-button">Sí</button>
+        <button id="no-button">No</button>
+    </div>
+
+    <script>
+        // Resto del código para el movimiento del botón "No" y redirecciones
+        let moveCount = 0;
+        const maxMoves = 10;
+
+        document.getElementById("no-button").addEventListener("mouseenter", function() {
+            if (moveCount < maxMoves) {
+                // Incrementar el contador de movimientos
+                moveCount++;
+
+                // Obtener dimensiones del contenedor de los botones y del botón "No"
+                const buttonsContainer = document.querySelector(".buttons");
+                const noButton = document.getElementById("no-button");
+
+                const containerWidth = buttonsContainer.clientWidth;
+                const containerHeight = buttonsContainer.clientHeight;
+
+                const buttonWidth = noButton.offsetWidth;
+                const buttonHeight = noButton.offsetHeight;
+
+                // Generar posiciones aleatorias dentro del contenedor
+                const randomX = Math.floor(Math.random() * (containerWidth - buttonWidth));
+                const randomY = Math.floor(Math.random() * (containerHeight - buttonHeight));
+
+                // Aplicar posiciones aleatorias al botón "No"
+                noButton.style.position = "absolute";
+                noButton.style.left = randomX + "px";
+                noButton.style.top = randomY + "px";
+            } else {
+                // Si se superan los 10 movimientos, cambiar el evento click del botón "No"
+                document.getElementById("no-button").addEventListener("click", function() {
+                    window.location.href = "segura.html"; // Redirigir a otra página
+                });
+            }
+        });
+
+        document.getElementById("yes-button").addEventListener("click", function() {
+            window.location.href = "lo sabia.html"; // Redirigir a la página "Lo sabía"
+        });
+    </script>
+</body>
+</html>

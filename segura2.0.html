@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ni la vrg</title>
+    <style>
+        body {
+            background-color: #F8BBD0; /* Fondo medio rosado suave */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-style: italic; /* Título en cursiva */
+            margin-top: 20px; /* Espacio desde la parte superior */
+        }
+        h4{
+            font-style: italic; /* Título en cursiva */
+            margin-top: 10px; /* Espacio desde la parte superior */
+        }
+        img {
+            margin-top: 20px; /* Espacio entre el título y la imagen */
+            max-width: 80%; /* Ajusta el tamaño máximo de la imagen al 80% del ancho de la página */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .buttons {
+            margin-top: 20px; /* Espacio entre la imagen y el botón */
+        }
+        .buttons button {
+            background-color: #E57373; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px; /* Bordes redondeados */
+        }
+        .buttons button:hover {
+            background-color: #EF5350; /* Color de fondo del botón al pasar el mouse */
+        }
+    </style>
+</head>
+<audio autoplay loop>
+    <source src="amor.mp3" type="audio/mpeg">
+</audio>
+<body>
+    <h1>no c puede</h1>
+    <img src="casados.jpg" alt="Imagen debajo del título">
+    <div class="buttons">
+        <button id="me-vale-button">asi que me vas a perdonar aun que no quieras</button>
+    </div>
+    <h4>sabe por que no c puede?
+        pq tu y yo estamos destinados a casarnos aun que quieras ser policia🤦🏿
+    </h4>
+
+    <script>
+        document.getElementById("me-vale-button").addEventListener("click", function() {
+            window.location.href = "pag.html"; // Redirigir a la página principal
+        });
+    </script>
+</body>
+</html>

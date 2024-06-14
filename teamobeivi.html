@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo sabía</title>
+    <style>
+        body {
+            background-color: #F8BBD0; /* Fondo medio rosado suave */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-style: italic; /* Título en cursiva */
+            margin-top: 20px; /* Espacio desde la parte superior */
+        }
+        img {
+            margin-top: 20px; /* Espacio entre el título y la imagen */
+            max-width: 80%; /* Ajusta el tamaño máximo de la imagen al 80% del ancho de la página */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .buttons {
+            margin-top: 20px; /* Espacio entre la imagen y el botón */
+        }
+        .buttons button {
+            background-color: #E57373; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px; /* Bordes redondeados */
+        }
+        .buttons button:hover {
+            background-color: #EF5350; /* Color de fondo del botón al pasar el mouse */
+        }
+    </style>
+</head>
+<audio autoplay loop>
+    <source src="Nya lero lero lero.mp4" type="audio/mpeg">
+</audio>
+<body>
+    <h1>Te amo mucho mi princesa muaks</h1>
+    <img src="gatos-abrasandose-y-besándose..gif" alt="Imagen debajo del título">
+    <div class="buttons">
+        <button id="perdon">sabia que me perdonarias</button>
+    </div>
+
+    <script>
+        document.getElementById("perdon").addEventListener("click", function() {
+            window.location.href = "teamobeivi.html"; // Redirigir a otra página
+        });
+    </script>
+</body>
+</html> 
